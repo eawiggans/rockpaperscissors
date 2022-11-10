@@ -6,11 +6,11 @@ var wins = 0;
 var losses = 0;
 var ties = 0;
 
-var letsGo = alert("Let's play rock, paper, scissors!");
+var letsGo = alert("let's play rock, paper, scissors!");
 
 function playGame() {
 
-    var enterHere = prompt("Enter r, p, or s")
+    var enterHere = prompt("enter r, p, or s")
 
     if (enterHere === "r" || enterHere === "p" || enterHere === "s") {
         var options = ("r" + "p" + "s");
@@ -24,7 +24,7 @@ function playGame() {
             enterHere == "s" && compChoice == "s"
         ) {
             ties++
-            alert("you tie. ties: " + ties)
+            alert("you tie.")
         }
         else if (
             enterHere == "s" && compChoice == "p" ||
@@ -32,19 +32,21 @@ function playGame() {
             enterHere == "p" && compChoice == "r"
         ) {
             wins++
-            alert("you win! wins: " + wins)
+            alert("you win!")
         }
         else {
             losses++
-            alert("you lose. losses: " + losses)
+            alert("you lose.")
         }
 
-        var playAgain = confirm("Want to play again?")
+        alert("stats:\nwins: " + wins + "\nlosses: " + losses + "\nties: " + ties);
+
+        var playAgain = confirm("want to play again?")
         if (playAgain) {
             playGame()
         }
         else {
-            document.write("thanks for playing!");
+            document.write("thanks for playing! see ya later.");
         }
     }
     else {
